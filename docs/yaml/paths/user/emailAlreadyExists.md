@@ -1,0 +1,1 @@
+Responsible for checking that email is already exists or not.

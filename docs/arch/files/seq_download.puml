@@ -1,0 +1,6 @@
+@startuml
+Client->Api:Request (file URL)
+Api->Client:Redirect (signed URL)
+Client->StorageService:Request (signed URL)
+StorageService->Client:File
+@enduml

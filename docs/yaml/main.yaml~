@@ -1,0 +1,50 @@
+# Magwhere APi documentation
+---
+swagger: '2.0'
+
+# Project information
+info:
+  version: 0.0.1
+  title: Golden Tender API
+  description: 'file:/main.md'
+
+# connection setup
+basePath: /api
+schemes: [http,https]
+
+# This is a JSON based API by default
+consumes: [application/json]
+produces: [application/json]
+
+# Security checks used for API routes
+securityDefinitions:
+  api_key:
+    description: Access key signifies an authorised client app, and is always required to call API. Obtain one from API owner.
+    type: apiKey
+    name: api_key
+    in: header
+  auth_token:
+    description: Auth token signifies an authorised user, and is required for login protected part of API. Obtain one by logging-in.
+    type: string
+    name: auth_token
+    in: header
+# Paths
+paths:
+  #masterdata
+  /data/allcountries: 'file:/paths/MasterDataOnce/getallcountries.yaml'
+  /data/allstates: 'file:/paths/MasterDataOnce/getallstates.yaml'
+  /data/allcities: 'file:/paths/MasterDataOnce/getallcities.yaml'
+  #categories
+  /insert_category: 'file:/paths/categories/addCategory.yaml'
+  #user
+  /user/register: 'file:/paths/user/register.yaml'
+  /user/login: 'file:/paths/user/login.yaml'
+  /user/verifyotp: 'file:/paths/user/verifyOtp.yaml'
+  /user/resendotp: 'file:/paths/user/resendOtp.yaml'
+  /user/setpassword: 'file:/paths/user/setPassword.yaml'
+  /user/view : 'file:/paths/user/view.yaml'
+  /user/logout: 'file:/paths/user/logout.yaml'
+  /user/exists: 'file:/paths/user/emailAlreadyExists.yaml'
+  /user/forgotpassword: 'file:/paths/user/forgotPassword.yaml'
+ # Schemas
+definitions: 'file:/definitions'

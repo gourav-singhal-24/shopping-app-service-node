@@ -1,0 +1,75 @@
+{
+    "server": {
+        "name": "Golden Tender API Server",
+        "host": "localhost",
+        "port": 3000
+    },
+    "mongodb": {
+        "url": "mongodb://172.18.1.62:27017/Golden_Tender"
+    },
+    "mail1": {
+        "transport": "SMTP",
+        "options": {
+            "service": "Mailgun",
+            "auth": {
+                "user": "postmaster@sandbox531e2b68a1c342858bd6d7fa9a25a98f.mailgun.org",
+                "pass": "bb1e977d2625f902fc90b8843c01ba0f"
+            }
+        }
+    },
+     "mail": {
+        "service": "SendGrid",
+        "auth": {
+            "api_user": "grishabh",
+            "api_key": "hrhk@1234"
+        }
+    },
+    "api_keys": {
+        "test": "S22A6C439881439481FFCDB66B44AAE0",
+        "android": "tLMpZr6mGCN7ZJVvm8UvbGJnlv5hscyit3Mr52OvIWt2Qn4ZuJZQ1FR3n9gxE1Ky",
+        "ios": "89v77wVr8LXqph0tzw5xoRoIqRJ3C1KTEoIBRiaWrQPWpXQBkrJZafG28aYBjN4O",
+        "web": "IawpIi0d2oFDnVqUAc8Z8389dTdqHxHed6Iqdhj7PBs2ZcJtqlkBTa2RM4nq0d8d"
+    },
+   
+    "constraints": {
+        "user_password_length": 6,
+        "token_expiry_seconds": 604800
+    },
+
+    "sms_gateway": {
+        "api_key": "A619a5e7e58a3eaf58dc351ad47e630ff",
+        "url": "http://alerts.solutionsinfini.com/api/v3/index.php?method=sms",
+        "sender": "IJCPHQ",
+        "format": "json",
+        "custom1": 1,
+        "custom2": 2,
+        "flash": 0
+    },
+
+    "push": {
+        "apn": {
+            "production": false,
+            "cert_path": "assets/apn_cert_dev.crt",
+            "key_path": "assets/apn_key_dev.pem"
+        },
+        "gcm": {
+            "gcm_key": "no_key"
+        }
+    },
+
+    "newrelic": {
+        "app_name": [
+            "SalesForceAPI"
+        ],
+        "license_key": "c8848cbc489ce090b8d38167042707bcb7769600",
+        "logging": {
+            "level": "info"
+        }
+    },
+    "signUpModel": {
+        "verifyUrl": "http://localhost:8080/verifyEmail?token=",
+        "title": "SalesForce",
+        "subTitle": "Thanks for signing up!",
+        "body": "Please verify your email address by clicking the button below"
+    }
+}

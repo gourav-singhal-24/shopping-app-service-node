@@ -1,0 +1,19 @@
+@startuml
+start
+:Request;
+if (input valid ?) then (yes)
+else (no)
+    :Invalid Input Error;
+    stop
+endif
+:Sanitize input;
+if (linked nodes are valid and exist ?) then (yes)
+else (no)
+    :Invalid Input Error;
+    stop
+endif
+:Create Post node;
+:Create relations to linked nodes;
+:Return Post data;
+stop
+@enduml

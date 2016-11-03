@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    div
+      h2 Hi #{data.name},
+    div
+      h3 Welcome to Our Shopping-Cart
+      h4 #{data.msg}
+      p The best features of Golden Tender are only available on your phone and tablet with the official shopping app. Download the app or go to goldentender.com on your computer or mobile device to get started.
+      p Verify your account with the OTP #{data.OTP}
+    if (!Role)
+      p Link as follow
+      p #{data.page} .
+    div
+      div Regards #{data.sender}

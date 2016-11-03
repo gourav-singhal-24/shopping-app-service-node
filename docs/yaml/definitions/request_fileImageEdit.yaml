@@ -1,0 +1,9 @@
+--- 
+description: "Post request schema."
+properties: 
+  file: 
+    description: "User's  profile pic."
+    type: file
+required: 
+  - file
+title: Put

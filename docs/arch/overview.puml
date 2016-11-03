@@ -1,0 +1,29 @@
+@startuml
+
+rectangle clients {
+    [Mobile]
+    [Browser]
+}
+
+rectangle ApiService {
+rectangle Storage {
+    [Database]
+    [Files]
+}
+
+rectangle Server {
+    [NodeJS]
+}
+
+rectangle Events {
+    [Email]
+    [SMS]
+    [Push]
+    [Socket]
+}
+}
+
+clients<-->ApiService
+
+
+@enduml

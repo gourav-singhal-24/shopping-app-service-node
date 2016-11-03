@@ -1,0 +1,11 @@
+@startuml
+Client->Api:File
+Api->Client:File node
+Client->Api:public url
+Api->Client:Link node
+Client->Api:event info
+Api->Client:Schedule node
+Api->Client:Specialities
+Client->Api:post data + (files,links,schedule,speciality etc)
+Api->Client:Post node
+@enduml

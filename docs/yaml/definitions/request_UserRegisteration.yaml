@@ -1,0 +1,30 @@
+--- 
+description: "Post request schema."
+properties: 
+  FirstName: 
+    description: "User's first name."
+    type: string
+  LastName: 
+    description: "User's last name."
+    type: string
+  Email: 
+    description: "User's Email Id."
+    type: string  
+  Password: 
+    description: "User's password.(min-length=6)"
+    type: string
+  Gender: 
+    description: "User's Gender.[male,female]"
+    type: string
+  Role:
+      description: "Get Role.{0-Admin,1-service provider,2-Customer}"
+      type: string 
+required: 
+  - Gender
+  - Email
+  - Password
+  - FirstName
+  - LastName
+  - Role
+ 
+title: Post

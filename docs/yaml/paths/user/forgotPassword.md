@@ -1,0 +1,1 @@
+Responsible for sending the email to the register email id for set the password again.

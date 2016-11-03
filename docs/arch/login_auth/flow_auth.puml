@@ -1,0 +1,24 @@
+@startuml
+start
+:Request;
+if (Has auth token ?) then (yes)
+    if (User has been granted an Auth with same token ?) then (yes)
+        if(Auth expired ?) then (yes)
+            :Delete Auth;
+            :Unauthorized Error;
+            stop
+        else (no)
+        endif
+        :Update Auth timestamp;
+        :Update Request with Auth node;
+        :Process Request further;
+        stop
+    else (no)
+        :Unauthorized Error;
+        stop
+    endif
+else (no)
+    :Unauthorized Error;
+    stop
+endif
+@enduml

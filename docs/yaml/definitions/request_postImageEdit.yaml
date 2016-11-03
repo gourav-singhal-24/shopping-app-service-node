@@ -1,0 +1,10 @@
+--- 
+description: "Post request schema."
+properties: 
+  id: 
+    description: "User's id."
+    name: id
+    type: string
+required: 
+  - id
+title: Put

@@ -1,0 +1,16 @@
+{
+    "node"          : true,
+    "debug"         : false,
+    "devel"         : true,
+
+    "strict"        : false,
+    "globalstrict"  : false,
+
+    "asi"           : true,
+    "curly"         : true,
+    "eqeqeq"        : true,
+    "undef"         : true,
+
+    "newcap"        : true,
+    "nonew"         : true
+}

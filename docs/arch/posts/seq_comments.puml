@@ -1,0 +1,4 @@
+@startuml
+Client->Api:text + post_id
+Api->Client:Comment node
+@enduml

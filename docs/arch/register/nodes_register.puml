@@ -1,0 +1,24 @@
+@startuml
+
+skinparam objectArrowFontSize 10
+
+(User)
+(Credential)
+rectangle {
+(ProfessionalDetail)
+(EducationDetail)
+}
+rectangle {
+    (PersonalAddress)
+    (ProfessionalAddress)
+}
+
+left to right direction
+(User)->(Credential):HAS
+(User)->(ProfessionalDetail): WORK_AT
+(User)->(EducationDetail): STUDY_AT
+(User)->(PersonalAddress): LOCATED_AT
+(User)->(ProfessionalAddress): LOCATED_AT
+
+
+@enduml

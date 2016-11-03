@@ -1,0 +1,1 @@
+Responsible for saving the data of user in database.And verify the user by sending the mail on its registered email id.

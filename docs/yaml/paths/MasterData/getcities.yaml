@@ -1,0 +1,27 @@
+get: 
+  description: "file:/getcities.md"
+  parameters: 
+    - 
+      description: "Get Country."
+      in: query
+      name: country
+      type: string
+    - 
+      description: "Get State."
+      in: query
+      name: state
+      type: string
+  required: 
+    - country
+    - state
+  responses: 
+    200: 
+      description: OK.
+  security: 
+    - 
+      api_key: []
+    - 
+      auth_token: []
+  summary: "Admin to get list of users."
+  tags: 
+    - masterdata

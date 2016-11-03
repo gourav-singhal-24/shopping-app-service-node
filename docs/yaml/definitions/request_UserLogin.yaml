@@ -1,0 +1,13 @@
+--- 
+description: "Post request schema."
+properties: 
+  Email: 
+    description: "User's email."
+    type: string
+  Password: 
+    description: "User's password."
+    type: string
+required: 
+  - Email
+  - Password
+title: Post

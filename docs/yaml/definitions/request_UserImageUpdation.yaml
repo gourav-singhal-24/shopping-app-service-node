@@ -1,0 +1,9 @@
+--- 
+description: "Post request schema."
+properties: 
+  path: 
+    description: "upload image path."
+    type: string
+required: 
+  - Email
+title: Post

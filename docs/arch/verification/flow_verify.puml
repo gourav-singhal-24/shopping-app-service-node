@@ -1,0 +1,17 @@
+@startuml
+start
+:Request Verify (type,value,code);
+if (input valid ?) then (yes)
+else (no)
+    :Invalid Input Error;
+    stop
+endif
+:Sanitize Input;
+if (Verification with same type, value and code exists?) then (yes)
+    :Return Verified : true;
+    stop
+else (no)
+    :Return Verified : false;
+    stop
+endif
+@enduml

@@ -1,0 +1,1 @@
+Responsible for getting all cities of a particular state or a particular country.

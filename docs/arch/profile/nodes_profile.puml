@@ -1,0 +1,41 @@
+@startuml
+
+skinparam objectArrowFontSize 9
+
+(User)
+
+rectangle {
+    (ProfessionalDetail)
+    (EducationDetail)
+    (AcademicAppointment)
+}
+
+rectangle {
+    (PersonalAddress)
+    (ProfessionalAddress)
+}
+
+rectangle {
+    (Presentation)
+    (Publication)
+}
+
+rectangle {
+(ProfessionalMembership)
+(MedicalGroup)
+(Commitee)
+}
+
+
+left to right direction
+(User)->(ProfessionalDetail): WORK_AT
+(User)->(EducationDetail): STUDY_AT
+(User)->(PersonalAddress): LOCATED_AT
+(User)->(ProfessionalAddress): LOCATED_AT
+(User)->(AcademicAppointment): APPOINTED_AT
+(User)->(Presentation): PRESENTED
+(User)->(Publication): PUBLISHED
+(User)->(ProfessionalMembership): MEMBER_OF
+(User)->(MedicalGroup): MEMBER_OF
+(User)->(Commitee): MEMBER_OF
+@enduml

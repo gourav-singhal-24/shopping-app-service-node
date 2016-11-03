@@ -1,0 +1,17 @@
+@startuml
+(AdminUser)
+
+rectangle {
+(Journal)
+(Issue)
+}
+
+(File)
+
+(AdminUser)->(Journal):CREATED
+(AdminUser)->(Issue):POSTED
+(AdminUser)->(File):UPLOADED
+(Journal)->(Issue):PUBLISHED
+(Journal)->(File):HAS
+(Issue)->(File):HAS
+@enduml

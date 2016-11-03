@@ -1,0 +1,21 @@
+get: 
+  description: "file:/getstates.md"
+  parameters: 
+    - 
+      description: "Get Country Name."
+      in: query
+      name: country
+      type: string
+  required: 
+    - country
+  responses: 
+    200: 
+      description: OK.
+  security: 
+    - 
+      api_key: []
+    - 
+      auth_token: []
+  summary: "Admin to get list of users."
+  tags: 
+    - masterdata

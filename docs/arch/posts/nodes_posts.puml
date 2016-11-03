@@ -1,0 +1,27 @@
+@startuml
+
+skinparam objectArrowFontSize  9
+
+(User)
+
+rectangle {
+    (Post)
+    (Comment)
+    (Link)
+}
+
+(File)
+(Schedule)
+(Speciality)
+
+User-->Post:POSTED
+User->Post:LIKED
+User->Comment:COMMENTED
+Post->Comment:HAS
+Post->Link:HAS
+Post->Schedule:ON
+Post->File:HAS
+Post->Speciality:FOR
+User->File:UPLOADED
+
+@enduml

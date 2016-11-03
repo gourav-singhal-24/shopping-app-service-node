@@ -1,0 +1,12 @@
+--- 
+description: "Post request schema."
+properties: 
+  Email: 
+    description: "User's Email."
+    type: string
+  OTP: 
+    description: "OTP Which is sent in Email."
+    type: string  
+required: 
+  - OTP
+title: Post

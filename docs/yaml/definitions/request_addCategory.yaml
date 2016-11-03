@@ -1,0 +1,14 @@
+
+description: "Post request schema."
+properties: 
+  name: 
+    description: "category name."
+    type: string
+  subCategories: 
+    description: "subCategories."
+    items:
+       $ref: "#/definitions/request_subCategory"
+    type: array
+required: 
+  - name
+title: Post

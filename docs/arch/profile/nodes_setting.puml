@@ -1,0 +1,9 @@
+@startuml
+
+skinparam objectArrowFontSize 9
+
+(User)
+(Setting)
+
+(User)->(Setting): HAS
+@enduml

@@ -1,0 +1,33 @@
+get: 
+  description: "file:/getallstates.md"
+  parameters: 
+    - 
+      description: "Get Country Name."
+      in: query
+      name: country
+      type: string
+  required: 
+    - country
+  responses: 
+    200: 
+      description: Success.
+    500:
+      description: Server Error.
+    207:
+       description: Multi Status Error.
+    407:
+       description: Forbidden Error.
+    400:
+       description: Bad Request.
+    401:
+       description: Unauthorized.
+    404:
+       description: Not Found.  
+  security: 
+    - 
+      api_key: []
+    - 
+      auth_token: []
+  summary: "To get list of all states of a particular country."
+  tags: 
+    - masterdata

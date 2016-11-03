@@ -1,0 +1,8 @@
+@startuml
+Client->Api:Upload
+Api->StorageService:Stream
+StorageService->Api:metadata
+Api->Database:metadata
+Database->Api:File node
+Api->Client:File node
+@enduml

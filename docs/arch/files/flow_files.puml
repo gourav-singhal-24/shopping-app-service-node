@@ -1,0 +1,17 @@
+@startuml
+:Request Upload (multipart data);
+:Parse part headers, detect MIME type;
+if(MIME type valid) then (yes)
+else (no)
+    :Invalid Input Error;
+    stop
+endif
+:Stream to Storage Service (with size limit);
+if (stored successfully) then (yes)
+    :Create File node with url and metadata;
+    :Return File node;
+    stop
+else (no)
+    :Upload Failed Error;
+    stop
+@enduml

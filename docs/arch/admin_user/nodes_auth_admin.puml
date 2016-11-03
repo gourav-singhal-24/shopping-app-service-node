@@ -1,0 +1,12 @@
+@startuml
+
+skinparam ObjectArrowFontSize 12
+
+(AdminUser)
+(Auth)
+(Credential)
+
+AdminUser->Auth:GRANTED
+AdminUser->Credential:HAS
+
+@enduml

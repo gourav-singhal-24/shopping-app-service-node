@@ -1,0 +1,1 @@
+Responsible for logout the user account.

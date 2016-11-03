@@ -1,0 +1,18 @@
+@startuml
+start
+:Request Register (user data, password, email/phone verify code);
+if (input valid ?) then (yes)
+else (no)
+    :Invalid Input Error;
+    stop
+endif
+:Sanitize Input;
+if (a correct email or phone verify code provided) then (yes)
+else (no)
+    :Invalid Input Error;
+    stop
+endif
+    :Create User and related Nodes;
+    :Respond with user data;
+stop
+@enduml

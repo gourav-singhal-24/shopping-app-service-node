@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        title="Docs"
+        style
+            include md.css
+    body
+        .markdown-body
+            h2="Api Events"
+            table
+                thead
+                    tr
+                        td="Name"
+                        td="Event Code"
+                        td="Description"
+                        td="Delivery"
+                        td="Payload"
+                tbody
+                    each val,index in api_events
+                        tr
+                            td= index
+                            td= val.event_code
+                            td= val.description
+                            td= val.delivery.join(',')
+                            td= JSON.stringify(val.payload,4)

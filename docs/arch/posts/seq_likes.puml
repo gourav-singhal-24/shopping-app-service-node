@@ -1,0 +1,4 @@
+@startuml
+Client->Api: post_id
+Api->Client: Post like count
+@enduml

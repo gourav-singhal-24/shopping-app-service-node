@@ -1,0 +1,23 @@
+@startuml
+start
+:Request Verification (type,value);
+if (input valid ?) then (yes)
+else (no)
+    :Invalid Input Error;
+    stop
+endif
+:Sanitize Input;
+if (Verification with same type and value exists?) then (yes)
+    :Update with new random code;
+else (no)
+    :Create a verification with random code;
+endif
+if(is type email ?) then (yes)
+    :Send code via email address;
+endif
+if(is type phone) then (yes)
+    :Send code via SMS;
+endif
+    :Respond with Verification node, without code;
+stop
+@enduml

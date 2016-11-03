@@ -1,0 +1,22 @@
+@startuml
+start
+:Request Login;
+if (input valid ?) then (yes)
+else (no)
+    :Invalid Input Error;
+    stop
+endif
+:Sanitize input;
+if (User with email exists) then (yes)
+    if (User has Credential with same password hash) then (yes)
+        :Grant user a new/existing Auth;
+        :Return Auth;
+        stop
+    else (no)
+    :Login Error;
+    stop
+    endif
+else (no)
+    :Login Error;
+    stop
+@enduml

@@ -1,0 +1,1 @@
+Responsible for resend the OTP if it expires then it generates new and sent it on register Email id.

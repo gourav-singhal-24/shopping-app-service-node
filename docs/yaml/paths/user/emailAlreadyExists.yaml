@@ -1,0 +1,38 @@
+get: 
+  description: "file:/emailAlreadyExists.md"
+  parameters: 
+    - 
+      description: "Get Email."
+      in: query
+      name: Email
+      type: string
+  required: 
+    - Email
+  responses: 
+    200: 
+      description: Success.
+    500:
+      description: Server Error.
+    207:
+       description: Multi Status Error.
+    407:
+       description: Forbidden Error.
+    400:
+       description: Bad Request.
+    401:
+       description: Unauthorized.
+    404:
+       description: Not Found.              
+          
+  security: 
+    - 
+      api_key: []
+    - 
+      auth_token: []
+  summary: "Check that email is already exists."
+  tags: 
+    - user
+    
+    
+   
+ 
